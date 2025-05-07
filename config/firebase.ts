@@ -3,16 +3,18 @@ import { getAnalytics } from "firebase/analytics";
 import {initializeAuth, getReactNativePersistence} from "firebase/auth";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { getFirestore } from "firebase/firestore";
+import dotenv from "dotenv";
+dotenv.config();
 // import { getAnalytics, isSupported } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAWahFzqJwBt43aH7s2PIwma9z7iOzD-zE",
-  authDomain: "expense-tracker-bf436.firebaseapp.com",
-  projectId: "expense-tracker-bf436",
-  storageBucket: "expense-tracker-bf436.firebasestorage.app",
-  messagingSenderId: "729216938270",
-  appId: "1:729216938270:web:28517aad5848b8a30ed90f",
-  measurementId: "G-1Z1CYXCVF5"
+  apiKey: process.env.apiKey,
+  authDomain: process.env.authDomain,
+  projectId: process.env.projectId,
+  storageBucket: process.env.storageBucket,
+  messagingSenderId: process.env.messagingSenderId,
+  appId: process.env.appId,
+  measurementId: process.env.measurementId,
 };
 
 // Initialize Firebase
